@@ -1,17 +1,23 @@
+import { motion } from 'framer-motion';
 import React from 'react'
 import { BsArrowUpRightCircle, BsFillLightbulbFill, BsLightbulb } from "react-icons/bs";
 
 
 function LandingPage() {
   return (
-    <div className='w-full h-screen bg-zinc-900 pt-1'>
+    <div data-scroll data-scroll-speed="-0.3" data-scroll-section className='w-full h-screen bg-zinc-900 pt-1'>
         <div className="textStructure mt-36 px-20">
             {["We Create","Eye-Opening","Presentations"].map((item,index)=>{
                 return <div key={index} className="masker">
                             <div className="flex items-end  w-fit">
-                            {index ===1 && (<div className=' mr-[1vw] w-[8vw] rounded-md bg-red-900 h-[5.7vw] relative -top-[1.2vw] overflow-hidden'>
+                            {index ===1 && (
+                                <motion.div
+                                initial={{width: 0}}
+                                animate={{width: "8vw"}}
+                                transition={{ease:[0.76, 0, 0.24, 1],duration: 1}}
+                                 className=' mr-[1vw] w-[8vw] rounded-md bg-red-900 h-[5.7vw] relative -top-[1.2vw] overflow-hidden'>
                                 <img className='bg-cover w-full h-full' src="https://ochi.design/wp-content/uploads/2022/04/content-image01.jpg" alt="" />
-                            </div>)}
+                                </motion.div>)}
                                 <h1 className="uppercase h-full text-[9vw] -mb-[1vw] pt-[2vw] leading-[.75]  font-medium font-['Founders_Grotesk_X']">
                                     {item}
                                 </h1>
