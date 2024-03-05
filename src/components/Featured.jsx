@@ -6,10 +6,10 @@ function Featured() {
     const cards=[useAnimation(),useAnimation()]
     
     const handleHover=(index)=>{
-        cards[index].start({y:"0",width:"50%"})
+        cards[index].start({y:"0"})
     }
     const handleHoverEnd=(index)=>{
-        cards[index].start({y:"100%",width:"100%"})
+        cards[index].start({y:"100%"})
     }
 
   return (
@@ -25,7 +25,7 @@ function Featured() {
             onHoverStart={()=>handleHover(0)}
             onHoverEnd={()=>handleHoverEnd(0)}
             className="cardContainer w-1/2 h-[80vh] relative">
-                <h1 className="absolute flex overflow-hidden z-[9] text-[#8ba628] left-full top-1/2 -translate-x-1/2 -translate-y-1/2 text-8xl leading-none tracking-tighter">
+                <h1 className="absolute flex overflow-hidden z-[9] text-[#8ba91c] left-full top-1/2 -translate-x-1/2 -translate-y-1/2 text-8xl leading-none tracking-tighter">
                     {"FYDE".split("").map((item,index)=>(
                         <motion.span 
                         initial={{y:'100%'}} 
@@ -34,12 +34,15 @@ function Featured() {
                         key={index}>{item}</motion.span>
                     ))}
                 </h1>
-                <div className="w-full h-full bg-zinc-500 rounded-xl overflow-hidden">
-                    <img className='w-full h-full bg-cover' src="https://ochi.design/wp-content/uploads/2023/10/Fyde_Illustration_Crypto_2-663x551.png" alt="" />
-                </div>
+                <motion.div
+                whileHover={{ scale: 0.9 }}
+                transition={{ease:[0.76, 0, 0.24, 1],duration: 1}}
+                 className="w-full h-full bg-zinc-500 rounded-xl overflow-hidden shadow-lg shadow-zinc-500">
+                    <img className='w-full h-full bg-cover rounded-xl' src="https://ochi.design/wp-content/uploads/2023/10/Fyde_Illustration_Crypto_2-663x551.png" alt="" />
+                </motion.div>
             </motion.div>
             <motion.div onHoverStart={()=>handleHover(1)} onHoverEnd={()=>handleHoverEnd(1)} className="cardContainer relative w-1/2 h-[80vh]">
-            <h1 className="absolute z-[9] flex overflow-hidden right-full top-1/2 text-[#8ba628] translate-x-1/2 -translate-y-1/2 text-8xl leading-none tracking-tighter">
+            <h1 className="absolute z-[9] flex overflow-hidden right-full top-1/2 text-[#8ba91c] translate-x-1/2 -translate-y-1/2 text-8xl leading-none tracking-tighter">
                 {"VISE".split("").map((item,index)=>(
                     <motion.span 
                         initial={{y:'100%'}} 
@@ -48,9 +51,12 @@ function Featured() {
                         key={index}>{item}</motion.span>
                 ))}
             </h1>
-                <div className="w-full h-full bg-zinc-500 rounded-xl overflow-hidden">
+                <motion.div
+                whileHover={{ scale: 0.9 }}
+                transition={{ease:[0.76, 0, 0.24, 1],duration: 1}}
+                className="w-full h-full bg-zinc-500 rounded-xl overflow-hidden shadow-lg shadow-zinc-700">
                     <img className='w-full h-full bg-cover' src="https://ochi.design/wp-content/uploads/2022/09/Vise_front2-663x551.jpg" alt="" />
-                </div>
+                </motion.div>
             </motion.div>
         </div>
         </div>

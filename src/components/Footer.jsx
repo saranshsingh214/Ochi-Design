@@ -16,19 +16,25 @@ function Footer() {
                 <path d="M52.4097 10.1387C51.2512 10.1119 50.1066 10.3947 49.0941 10.958C48.0816 11.5212 47.2379 12.3445 46.6501 13.3427V0.172852H42.293V29.4688H46.6501C46.6501 29.1721 46.6501 18.7816 46.6501 18.7816C46.6501 15.6946 47.8619 13.4352 50.8084 13.4352C54.6046 13.4352 54.6209 17.4178 54.6209 19.6962C54.6209 22.9165 54.6209 25.5189 54.6209 28.7393V29.4987H59.0271C59.0271 29.3708 59.0488 29.2728 59.0488 29.1721C59.0488 25.5108 59.0951 21.8522 59.0325 18.1909C58.9916 15.6538 58.5015 10.1387 52.4097 10.1387Z" fill="currentColor"></path>
             </svg>
         </div>
-        <div className="right w-1/2 ">
+        <div className="h-full flex flex-col justify-between w-1/2 ">
+            <div className="heading">
             <h1 className='font-["Founders_Grotesk_X"] text-[8vw] leading-[.75] font-semibold'>PRESENTATIONS</h1>
             <div className="mt-10 font-['Neue_Montreal']">
                 <div className="socialMedia">
                     <h1 className='text-3xl font-bold py-4'>Social Media:</h1>
                     {["Instagram", "Facebook", "Twitter", "LinkedIn"].map((item,index)=>{
-                        return <a className='block font-light text-xl underline' href="#">{item}</a>
+                        return <a className='block font-light text-md underline' href="#">{item}</a>
                     })}
                 </div>
                 <div className="emails">
                 <h1 className='text-3xl font-bold py-4'>Email:</h1>
-                    <a className='block font-light text-xl underline' href="#">hello@ochi.design</a>
+                    <a className='block font-light text-md underline' href="#">hello@ochi.design</a>
                 </div>
+            </div>
+            </div>
+            <div className="flex justify-between font-light">
+                <h1>© ochi design 2024. <a href="#" className='underline'>Legal Terms</a></h1>
+                <a href='#'>Website by Obys</a>
             </div>
         </div>
     </div>

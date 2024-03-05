@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import React from 'react'
-import { BsArrowUpRightCircle, BsFillLightbulbFill, BsLightbulb } from "react-icons/bs";
+import { BsArrowUpRightCircle } from "react-icons/bs";
 
 
 function LandingPage() {
